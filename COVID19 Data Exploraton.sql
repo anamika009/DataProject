@@ -10,6 +10,7 @@ Select * FROM CovidDeaths  where continent is not NULL order by 3,4
 Select location, date, total_cases, new_cases, total_deaths, population
 From DEProject..CovidDeaths order by 1,2
 
+--LOCATION WISE
 
 -- Total Cases vs Total Deaths (chances of dying by COVID)
 Select location, date, total_cases, total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
@@ -31,7 +32,7 @@ Select location , continent,  MAX(cast(total_deaths as int)) as TotaldeathCount
 From DEProject..CovidDeaths where continent is NOT null  Group by location , continent
 order by TotaldeathCount desc
 
---CONTINENT
+--CONTINENT WISE
 
 --Continents with highest death count
 Select continent, SUM(cast(new_deaths as int)) as TotalDeathCount
