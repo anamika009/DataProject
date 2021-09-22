@@ -1,4 +1,7 @@
 --COVID 19 WORLD DATA EXPLORATION IN SQL
+--Working on two tables for data exploration
+--CovidDeaths:containg information like daily new_cases, new_coviddeaths, etc related to each location with date.
+--CovidVaccination: containing information like new vaccination, total vaccination etc related to each location with date.
 
 Select * FROM CovidDeaths  where continent is not NULL order by 3,4
 
